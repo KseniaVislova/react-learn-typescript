@@ -1,3 +1,4 @@
+import React from 'react';
 import { useState, useRef, useEffect } from "react";
 import { ITodo } from "../types/data";
 import { TodoList } from "./TodoList";
@@ -11,7 +12,7 @@ const App: React.FC = () => {
     return initialValue;
   });
   const [count, setCount] = useState(() => {
-    const temp = localStorage.getItem("count")
+    const temp = localStorage.getItem("count");
     const initialValue = temp ? JSON.parse(temp) : 0;
     return initialValue;
   });
@@ -28,20 +29,22 @@ const App: React.FC = () => {
       setValue("");
       setCount(count + 1);
     }
-  }
+  };
 
   const removeTodo = (id: number) :void => {
     setTodos(todos.filter((todo) => todo.id !== id));
     todos.forEach((todo) => {
       if(todo.id === id) {
-        if (!todo.completed) setCount(count - 1);
+        if (!todo.completed) {
+          setCount(count - 1);
+        }
       }
-    })
-  }
+    });
+  };
 
   const toggleTodo = (id: number) :void => {
     setTodos(todos.map((todo) => {
-      if (todo.id !== id) return todo;
+      if (todo.id !== id) todo;
 
       if (todo.completed) {
         setCount(count + 1);
@@ -54,17 +57,17 @@ const App: React.FC = () => {
         completed: !todo.completed,
       }
     }));
-  }
+  };
 
   const saveTodo = () => {
     localStorage.setItem("count", JSON.stringify(count));
     localStorage.setItem("todos", JSON.stringify(todos));
-  }
+  };
 
   useEffect(() => {
     if (inputRef.current) {
-      inputRef.current.focus()
-    };
+      inputRef.current.focus();
+    }
   }, []);
 
   const handleChange: React.ChangeEventHandler<HTMLInputElement> = (e) => {

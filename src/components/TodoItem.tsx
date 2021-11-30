@@ -1,5 +1,5 @@
-import { ITodo } from '../types/data';
-import styles from './TodoItem.module.css';
+import { ITodo } from "../types/data";
+import styles from "./TodoItem.module.css";
 import classnames from "classnames";
 
 interface ITodoItem extends ITodo {
@@ -12,11 +12,11 @@ const TodoItem: React.FC<ITodoItem> = (props) => {
 
   return <div className={styles.wrapper}>
     <div className={styles.item}>
-      <input className={styles.checkbox} type='checkbox' checked={completed} onChange={() => toggleTodo(id)}/>
-      <span className={classnames([''], {[styles.completed]: completed})}>{title}</span>
+      <input className={styles.checkbox} type="checkbox" checked={completed} onChange={() => toggleTodo(id)}/>
+      <span className={classnames([""], {[styles.completed]: completed})}>{title}</span>
     </div>
     <button className={styles.cross} onClick={() => removeTodo(id)}>x</button>
   </div>;
-}
+};
 
-export { TodoItem }
+export { TodoItem };

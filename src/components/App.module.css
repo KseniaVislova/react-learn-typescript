@@ -1,5 +1,5 @@
 .container {
-  min-height: 100vh;
+  min-height: calc(100vh - 2rem);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -39,7 +39,7 @@
   border: 1px solid #272343;
 }
 
-.form input:focus, 
+.form input:focus,
 .form input:focus-visible {
   border: 1px solid #e3f6f5;
   outline: #e3f6f5;

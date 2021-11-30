@@ -1,7 +1,7 @@
-import React from 'react';
+import React from "react";
 import { TodoItem } from "./TodoItem";
-import { ITodo } from '../types/data';
-import styles from './TodoList.module.css';
+import { ITodo } from "../types/data";
+import styles from "./TodoList.module.css";
 
 interface ITodoListProps {
   items: ITodo[];
@@ -14,7 +14,7 @@ const TodoList: React.FC<ITodoListProps> = (props) => {
 
   return <div className={styles.wrapper}>
     {
-      items.map(item => (
+      items.map((item) => (
         <TodoItem 
         key={item.id} 
         {...item} 
@@ -24,4 +24,4 @@ const TodoList: React.FC<ITodoListProps> = (props) => {
   </div>;
 }
 
-export { TodoList }
+export { TodoList };

@@ -1,4 +1,3 @@
-import React from "react";
 import { useState, useRef, useEffect } from "react";
 import { ITodo } from "../types/data";
 import { TodoList } from "./TodoList";
@@ -44,7 +43,9 @@ const App: React.FC = () => {
 
   const toggleTodo = (id: number) :void => {
     setTodos(todos.map((todo) => {
-      if (todo.id !== id) todo;
+      if (todo.id !== id) {
+        return todo;
+      };
 
       if (todo.completed) {
         setCount(count + 1);
@@ -72,11 +73,13 @@ const App: React.FC = () => {
 
   const handleChange: React.ChangeEventHandler<HTMLInputElement> = (e) => {
     setValue(e.target.value);
-  }
+  };
 
   const handleKeyDown: React.KeyboardEventHandler<HTMLInputElement> = (e) => {
-    if (e.key === "Enter") addTodo();
-  }
+    if (e.key === "Enter") {
+      addTodo();
+    }
+  };
 
   return <div className={styles.container}>
       <div className={styles.wrapper}>

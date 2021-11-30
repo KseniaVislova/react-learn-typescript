@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 import { useState, useRef, useEffect } from "react";
 import { ITodo } from "../types/data";
 import { TodoList } from "./TodoList";
@@ -55,7 +55,7 @@ const App: React.FC = () => {
       return {
         ...todo,
         completed: !todo.completed,
-      }
+      };
     }));
   };
 

@@ -7,7 +7,7 @@ interface ITodoListProps {
   items: ITodo[];
   removeTodo: (id: number) => void;
   toggleTodo: (id: number) => void;
-};
+}
 
 const TodoList: React.FC<ITodoListProps> = (props) => {
   const {items, removeTodo, toggleTodo} = props;
@@ -22,6 +22,6 @@ const TodoList: React.FC<ITodoListProps> = (props) => {
         toggleTodo={toggleTodo}/>))
     }
   </div>;
-}
+};
 
 export { TodoList };

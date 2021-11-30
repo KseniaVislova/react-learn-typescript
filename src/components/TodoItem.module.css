@@ -1,0 +1,38 @@
+.wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  margin-right: 1.5rem;
+}
+
+.checkbox {
+  margin-right: 1.5rem;
+  cursor: pointer;
+}
+
+.completed {
+  text-decoration: line-through;
+}
+
+.cross {
+  padding: 2px 5px;
+  color: brown;
+  box-shadow: none;
+  border: 1px solid brown;
+}
+
+@media (max-width: 375px) {
+  .item {
+    margin-right: 1rem;
+  }
+  
+  .checkbox {
+    margin-right: 1rem;
+  }
+}

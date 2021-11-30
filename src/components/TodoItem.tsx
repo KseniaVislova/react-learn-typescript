@@ -5,7 +5,7 @@ import classnames from "classnames";
 interface ITodoItem extends ITodo {
   removeTodo: (id: number) => void;
   toggleTodo: (id: number) => void;
- };
+ }
 
 const TodoItem: React.FC<ITodoItem> = (props) => {
   const {id, title, completed, removeTodo, toggleTodo} = props;
@@ -16,7 +16,7 @@ const TodoItem: React.FC<ITodoItem> = (props) => {
       <span className={classnames([''], {[styles.completed]: completed})}>{title}</span>
     </div>
     <button className={styles.cross} onClick={() => removeTodo(id)}>x</button>
-  </div>
+  </div>;
 }
 
 export { TodoItem }

@@ -54,11 +54,13 @@ button {
   border: none;
   box-shadow: 0 0 10px #272343;
   cursor: pointer;
+  transition: all 1s;
 }
 
-.button:hover {
+button:hover {
   color: #e3f6f5;
   background-color: #272343;
+  transition: all 1s;
 }
 
 @media (max-width: 375px) {

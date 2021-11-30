@@ -56,6 +56,11 @@ button {
   cursor: pointer;
 }
 
+.button:hover {
+  color: #e3f6f5;
+  background-color: #272343;
+}
+
 @media (max-width: 375px) {
   .wrapper {
     padding: 1rem;

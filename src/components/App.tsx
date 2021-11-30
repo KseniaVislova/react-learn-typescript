@@ -45,7 +45,7 @@ const App: React.FC = () => {
     setTodos(todos.map((todo) => {
       if (todo.id !== id) {
         return todo;
-      };
+      }
 
       if (todo.completed) {
         setCount(count + 1);
@@ -93,6 +93,6 @@ const App: React.FC = () => {
       <button onClick={saveTodo}>Сохранить изменения</button>
     </div>
   </div>;
-}
+};
 
 export { App };
